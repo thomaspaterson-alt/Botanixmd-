@@ -1,0 +1,28 @@
+{
+  "name": "botanixmd-pro",
+  "version": "1.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "postinstall": "prisma generate",
+    "db:push": "prisma db push",
+    "sitemap": "node scripts/sitemap.js",
+    "stripe:listen": "stripe listen --forward-to localhost:3000/api/stripe/webhook",
+    "cms:studio": "npx sanity@latest dev ./sanity"
+  },
+  "dependencies": {
+    "@prisma/client": "5.17.0",
+    "@sanity/client": "6.18.2",
+    "next": "14.2.5",
+    "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "stripe": "16.2.0",
+    "zod": "3.23.8"
+  },
+  "devDependencies": {
+    "prisma": "5.17.0",
+    "typescript": "5.5.4"
+  }
+}
