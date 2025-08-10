@@ -40,3 +40,8 @@ export async function POST(req: NextRequest){
   return NextResponse.json({ received: true })
 }
 export const dynamic = "force-dynamic"
+
+export async function GET(req: Request) {
+  // allow ?token=... in the URL on mobile
+  return POST(req as any);
+}
